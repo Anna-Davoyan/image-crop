@@ -1,0 +1,95 @@
+body {
+    overflow: hidden;
+}
+.wrapper{
+
+    width: 1124px;
+    margin: 0 auto;
+    padding: 70px 0;
+
+}
+
+#pane-crop{
+    display: none;
+}
+#pane {
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    top: 20%;
+    left: 20%;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    border: 1.5px solid black;
+    border-style: dashed;
+}
+
+#ghostpane {
+    background: #999;
+    opacity: 0.2;
+    width: 45%;
+    height: 45%;
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 98;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.angles {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #2d3436;
+}
+
+.left-middle {
+    left: -4.5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.top-middle {
+    top: -4.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right-middle {
+    right: -4.5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bottom-middle {
+    bottom: -4.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left-top {
+    left: -4px;
+    top: -4px;
+}
+
+.right-top {
+    right: -4px;
+    top: -4px;
+}
+
+.right-bottom {
+    right: -4px;
+    bottom: -4px;
+}
+
+.left-bottom {
+    left: -4px;
+    bottom: -4px;
+}
