@@ -325,14 +325,18 @@ function done() {
 
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    // ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    console.log('--------', b.x, b.top);
-    console.log('--------', b.width, b.height);
+     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     ctx.drawImage(imageThis,
-        b.x, b.top,   // Start at 10 pixels from the left and the top of the image (crop),
-        b.width, b.height,   // "Get" a `80 * 30` (w * h) area from the source image (crop),
-        0, 0,     // Place the result at 0, 0 in the canvas,
+        b.x, b.top,
+        b.width, b.height,
+        0, 0,
         b.width, b.height);
 }
+
+
+download_img = function(el) {
+    const canvas = document.getElementById('canvas');
+    var image = canvas.toDataURL("image/jpg");
+    el.href = image;
+};
